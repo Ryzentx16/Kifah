@@ -14,11 +14,11 @@ import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import OpenAI from "openai";
-import { OPENAI_API_KEY } from "@env";
+// import { OPENAI_API_KEY } from "@env";
 // import OPENAI_API_KEY from "./../config";
 
 const openai = new OpenAI({
-  apiKey: OPENAI_API_KEY,
+  apiKey: process.env.EXPO_PUBLIC_OPENAI_API_KEY,
 });
 
 export default function ChatbotScreen() {
